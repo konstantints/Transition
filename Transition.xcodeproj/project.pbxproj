@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		F93495A41E37433D00D85622 /* Transition.h in Headers */ = {isa = PBXBuildFile; fileRef = F93495A21E37433D00D85622 /* Transition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F93495AC1E3743D400D85622 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93495AB1E3743D400D85622 /* Transition.swift */; };
+		F93495B41E3745FE00D85622 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93495B31E3745FE00D85622 /* AppDelegate.swift */; };
+		F93495B61E3745FE00D85622 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93495B51E3745FE00D85622 /* ViewController.swift */; };
+		F93495B91E3745FE00D85622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93495B71E3745FE00D85622 /* Main.storyboard */; };
+		F93495BB1E3745FE00D85622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93495BA1E3745FE00D85622 /* Assets.xcassets */; };
+		F93495BE1E3745FE00D85622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93495BC1E3745FE00D85622 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,10 +21,24 @@
 		F93495A21E37433D00D85622 /* Transition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transition.h; sourceTree = "<group>"; };
 		F93495A31E37433D00D85622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93495AB1E3743D400D85622 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		F93495B11E3745FE00D85622 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93495B31E3745FE00D85622 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F93495B51E3745FE00D85622 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F93495B81E3745FE00D85622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F93495BA1E3745FE00D85622 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F93495BD1E3745FE00D85622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F93495BF1E3745FE00D85622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F934959B1E37433D00D85622 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93495AE1E3745FE00D85622 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				F93495A11E37433D00D85622 /* Transition */,
+				F93495B21E3745FE00D85622 /* iOS Example */,
 				F93495A01E37433D00D85622 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				F934959F1E37433D00D85622 /* Transition.framework */,
+				F93495B11E3745FE00D85622 /* iOS Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +82,19 @@
 				F93495A31E37433D00D85622 /* Info.plist */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		F93495B21E3745FE00D85622 /* iOS Example */ = {
+			isa = PBXGroup;
+			children = (
+				F93495B31E3745FE00D85622 /* AppDelegate.swift */,
+				F93495B51E3745FE00D85622 /* ViewController.swift */,
+				F93495B71E3745FE00D85622 /* Main.storyboard */,
+				F93495BA1E3745FE00D85622 /* Assets.xcassets */,
+				F93495BC1E3745FE00D85622 /* LaunchScreen.storyboard */,
+				F93495BF1E3745FE00D85622 /* Info.plist */,
+			);
+			path = "iOS Example";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,12 +129,30 @@
 			productReference = F934959F1E37433D00D85622 /* Transition.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F93495B01E3745FE00D85622 /* iOS Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93495C01E3745FE00D85622 /* Build configuration list for PBXNativeTarget "iOS Example" */;
+			buildPhases = (
+				F93495AD1E3745FE00D85622 /* Sources */,
+				F93495AE1E3745FE00D85622 /* Frameworks */,
+				F93495AF1E3745FE00D85622 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS Example";
+			productName = "iOS Example";
+			productReference = F93495B11E3745FE00D85622 /* iOS Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F93495961E37433D00D85622 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Chipp Studio";
 				TargetAttributes = {
@@ -108,6 +160,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7H73NQ5KRA;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					F93495B01E3745FE00D85622 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7H73NQ5KRA;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -118,6 +175,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F93495951E37433D00D85622;
 			productRefGroup = F93495A01E37433D00D85622 /* Products */;
@@ -125,6 +183,7 @@
 			projectRoot = "";
 			targets = (
 				F934959E1E37433D00D85622 /* Transition */,
+				F93495B01E3745FE00D85622 /* iOS Example */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +193,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93495AF1E3745FE00D85622 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93495BE1E3745FE00D85622 /* LaunchScreen.storyboard in Resources */,
+				F93495BB1E3745FE00D85622 /* Assets.xcassets in Resources */,
+				F93495B91E3745FE00D85622 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +217,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F93495AD1E3745FE00D85622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93495B61E3745FE00D85622 /* ViewController.swift in Sources */,
+				F93495B41E3745FE00D85622 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F93495B71E3745FE00D85622 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93495B81E3745FE00D85622 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F93495BC1E3745FE00D85622 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93495BD1E3745FE00D85622 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F93495A51E37433D00D85622 /* Debug */ = {
@@ -291,6 +388,32 @@
 			};
 			name = Release;
 		};
+		F93495C11E3745FE00D85622 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7H73NQ5KRA;
+				INFOPLIST_FILE = "iOS Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.chippstudio.iOS-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F93495C21E3745FE00D85622 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7H73NQ5KRA;
+				INFOPLIST_FILE = "iOS Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ee.chippstudio.iOS-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -308,6 +431,14 @@
 			buildConfigurations = (
 				F93495A81E37433D00D85622 /* Debug */,
 				F93495A91E37433D00D85622 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F93495C01E3745FE00D85622 /* Build configuration list for PBXNativeTarget "iOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93495C11E3745FE00D85622 /* Debug */,
+				F93495C21E3745FE00D85622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
