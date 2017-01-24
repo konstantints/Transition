@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F93495A41E37433D00D85622 /* Transition.h in Headers */ = {isa = PBXBuildFile; fileRef = F93495A21E37433D00D85622 /* Transition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F93495AC1E3743D400D85622 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93495AB1E3743D400D85622 /* Transition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F934959F1E37433D00D85622 /* Transition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93495A21E37433D00D85622 /* Transition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transition.h; sourceTree = "<group>"; };
 		F93495A31E37433D00D85622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93495AB1E3743D400D85622 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +48,19 @@
 		F93495A11E37433D00D85622 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
+				F93495AA1E37435900D85622 /* Support */,
+				F93495AB1E3743D400D85622 /* Transition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		F93495AA1E37435900D85622 /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				F93495A21E37433D00D85622 /* Transition.h */,
 				F93495A31E37433D00D85622 /* Info.plist */,
 			);
-			path = Transition;
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +107,7 @@
 					F934959E1E37433D00D85622 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7H73NQ5KRA;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93495AC1E3743D400D85622 /* Transition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +253,7 @@
 		F93495A81E37433D00D85622 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7H73NQ5KRA;
@@ -252,6 +266,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ee.chippstudio.Transition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -259,6 +274,7 @@
 		F93495A91E37433D00D85622 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7H73NQ5KRA;
