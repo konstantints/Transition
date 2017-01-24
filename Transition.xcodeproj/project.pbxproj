@@ -14,7 +14,35 @@
 		F93495B91E3745FE00D85622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93495B71E3745FE00D85622 /* Main.storyboard */; };
 		F93495BB1E3745FE00D85622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93495BA1E3745FE00D85622 /* Assets.xcassets */; };
 		F93495BE1E3745FE00D85622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93495BC1E3745FE00D85622 /* LaunchScreen.storyboard */; };
+		F93495C91E37475600D85622 /* NavigationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93495C81E37475600D85622 /* NavigationTransition.swift */; };
+		F93495CF1E378D8900D85622 /* NavigationTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93495CE1E378D8900D85622 /* NavigationTransitionViewController.swift */; };
+		F93495D21E3791D300D85622 /* Transition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F934959F1E37433D00D85622 /* Transition.framework */; };
+		F93495D31E3791D300D85622 /* Transition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F934959F1E37433D00D85622 /* Transition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F93495D41E3791D300D85622 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F93495961E37433D00D85622 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F934959E1E37433D00D85622;
+			remoteInfo = Transition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F93495D61E3791D300D85622 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F93495D31E3791D300D85622 /* Transition.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F934959F1E37433D00D85622 /* Transition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Transition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +56,8 @@
 		F93495BA1E3745FE00D85622 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F93495BD1E3745FE00D85622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F93495BF1E3745FE00D85622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93495C81E37475600D85622 /* NavigationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTransition.swift; sourceTree = "<group>"; };
+		F93495CE1E378D8900D85622 /* NavigationTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTransitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93495D21E3791D300D85622 /* Transition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,13 +119,55 @@
 			isa = PBXGroup;
 			children = (
 				F93495B31E3745FE00D85622 /* AppDelegate.swift */,
-				F93495B51E3745FE00D85622 /* ViewController.swift */,
-				F93495B71E3745FE00D85622 /* Main.storyboard */,
-				F93495BA1E3745FE00D85622 /* Assets.xcassets */,
-				F93495BC1E3745FE00D85622 /* LaunchScreen.storyboard */,
-				F93495BF1E3745FE00D85622 /* Info.plist */,
+				F93495C71E37470100D85622 /* Transition Subclasses */,
+				F93495C61E3746EB00D85622 /* iOS Examples */,
+				F93495C51E3746C500D85622 /* Launch Screen */,
+				F93495C41E3746A600D85622 /* Images */,
+				F93495C31E37469600D85622 /* Support */,
 			);
 			path = "iOS Example";
+			sourceTree = "<group>";
+		};
+		F93495C31E37469600D85622 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F93495BF1E3745FE00D85622 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		F93495C41E3746A600D85622 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F93495BA1E3745FE00D85622 /* Assets.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		F93495C51E3746C500D85622 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				F93495BC1E3745FE00D85622 /* LaunchScreen.storyboard */,
+			);
+			name = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		F93495C61E3746EB00D85622 /* iOS Examples */ = {
+			isa = PBXGroup;
+			children = (
+				F93495B71E3745FE00D85622 /* Main.storyboard */,
+				F93495B51E3745FE00D85622 /* ViewController.swift */,
+				F93495CE1E378D8900D85622 /* NavigationTransitionViewController.swift */,
+			);
+			name = "iOS Examples";
+			sourceTree = "<group>";
+		};
+		F93495C71E37470100D85622 /* Transition Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				F93495C81E37475600D85622 /* NavigationTransition.swift */,
+			);
+			name = "Transition Subclasses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +192,7 @@
 				F934959B1E37433D00D85622 /* Frameworks */,
 				F934959C1E37433D00D85622 /* Headers */,
 				F934959D1E37433D00D85622 /* Resources */,
+				F93495CA1E37491700D85622 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,10 +210,13 @@
 				F93495AD1E3745FE00D85622 /* Sources */,
 				F93495AE1E3745FE00D85622 /* Frameworks */,
 				F93495AF1E3745FE00D85622 /* Resources */,
+				F93495CB1E37492400D85622 /* ShellScript */,
+				F93495D61E3791D300D85622 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F93495D51E3791D300D85622 /* PBXTargetDependency */,
 			);
 			name = "iOS Example";
 			productName = "iOS Example";
@@ -208,6 +285,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F93495CA1E37491700D85622 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		F93495CB1E37492400D85622 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F934959A1E37433D00D85622 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,11 +328,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93495B61E3745FE00D85622 /* ViewController.swift in Sources */,
+				F93495CF1E378D8900D85622 /* NavigationTransitionViewController.swift in Sources */,
 				F93495B41E3745FE00D85622 /* AppDelegate.swift in Sources */,
+				F93495C91E37475600D85622 /* NavigationTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F93495D51E3791D300D85622 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F934959E1E37433D00D85622 /* Transition */;
+			targetProxy = F93495D41E3791D300D85622 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F93495B71E3745FE00D85622 /* Main.storyboard */ = {
@@ -391,6 +507,7 @@
 		F93495C11E3745FE00D85622 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7H73NQ5KRA;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
@@ -404,6 +521,7 @@
 		F93495C21E3745FE00D85622 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7H73NQ5KRA;
 				INFOPLIST_FILE = "iOS Example/Info.plist";

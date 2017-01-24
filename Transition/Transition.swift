@@ -8,7 +8,8 @@
 
 import UIKit
 
-@objc protocol TransitionAnimationsProtocol: NSObjectProtocol {
+@objc
+public protocol TransitionAnimationsProtocol: NSObjectProtocol {
     @objc optional func presentAnimation(interactive: Bool)
     @objc optional func dismissAnimation(interactive: Bool)
 }
@@ -16,21 +17,31 @@ import UIKit
 open class Transition: NSObject, TransitionAnimationsProtocol {
     
     // MARK: - Private(set) variables
-    fileprivate(set) var transitionDuration: TimeInterval = 0.3
-    fileprivate(set) var transitionContext: UIViewControllerContextTransitioning!
-    fileprivate(set) var containerView: UIView!
-    fileprivate(set) var toViewController: UIViewController!
-    fileprivate(set) var fromViewController: UIViewController!
-    fileprivate(set) var isPresenting: Bool = true
-    fileprivate(set) var ownerController: UIViewController!
+    public fileprivate(set) var transitionDuration: TimeInterval = 0.3
+    public fileprivate(set) var transitionContext: UIViewControllerContextTransitioning!
+    public fileprivate(set) var containerView: UIView!
+    public fileprivate(set) var toViewController: UIViewController!
+    public fileprivate(set) var fromViewController: UIViewController!
+    public fileprivate(set) var isPresenting: Bool = true
+    public fileprivate(set) var ownerController: UIViewController!
     
     // MARK: - Private
     fileprivate var interactionDismissalController: UIPercentDrivenInteractiveTransition!
     
     // MARK: - Init
-    init(animationDuration duration: TimeInterval) {
+    public init(animationDuration duration: TimeInterval) {
         super.init()
         self.transitionDuration = duration
+    }
+    
+    public override init() {
+        super.init()
+        self.transitionDuration = 0.3
+    }
+    
+    // MARK: - Public func
+    open func prepareTransition() {
+        // Override this method to initialize your class internal variables. For example: Gesture recognizer
     }
 }
 
@@ -112,16 +123,16 @@ extension Transition: UIViewControllerTransitioningDelegate {
 
 // MARK: - Interactive dissmiss
 extension Transition {
-    func beginInteractiveDismissalTransition(completion: (() -> Void)?) {
+    public func beginInteractiveDismissalTransition(completion: (() -> Void)?) {
         self.interactionDismissalController = UIPercentDrivenInteractiveTransition()
         self.ownerController.dismiss(animated: true, completion: completion)
     }
     
-    func updateInteractiveDismissalTransaction(_toProgress progress: CGFloat) {
+    public func updateInteractiveDismissalTransaction(_toProgress progress: CGFloat) {
         self.interactionDismissalController.update(progress)
     }
     
-    func cancelInteractiveDismissalTransaction() {
+    public func cancelInteractiveDismissalTransaction() {
         // http://openradar.appspot.com/14675246
         self.interactionDismissalController.completionSpeed = 0.999 // http://stackoverflow.com/a/22968139/188461
         self.interactionDismissalController.cancel()
@@ -129,7 +140,7 @@ extension Transition {
         self.interactionDismissalController = nil
     }
     
-    func finishInteractionDismissalTransaction() {
+    public func finishInteractionDismissalTransaction() {
         self.interactionDismissalController.finish()
         self.interactionDismissalController = nil
     }
@@ -148,6 +159,7 @@ public extension UIViewController {
         set {
             newValue?.ownerController = self
             self.transitioningDelegate = newValue
+            newValue?.prepareTransition()
             objc_setAssociatedObject(self, &transitionAssociatedObject, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
