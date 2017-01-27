@@ -27,6 +27,7 @@ open class Transition: NSObject, TransitionAnimationsProtocol {
     
     // MARK: - Private
     fileprivate var interactionDismissalController: UIPercentDrivenInteractiveTransition!
+    fileprivate var interactivePresentationController: UIPercentDrivenInteractiveTransition!
     
     // MARK: - Init
     public init(animationDuration duration: TimeInterval) {
@@ -109,7 +110,7 @@ extension Transition: UIViewControllerTransitioningDelegate {
     }
     
     public func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return nil
+        return self.interactivePresentationController
     }
     
     public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
@@ -118,6 +119,30 @@ extension Transition: UIViewControllerTransitioningDelegate {
     
     public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return nil
+    }
+}
+
+// MARK: - Interactive presentation
+extension Transition {
+    public func beginInteractivePresentationTransition(from: UIViewController, completion: (() -> Void)?) {
+        self.interactivePresentationController = UIPercentDrivenInteractiveTransition()
+        from.present(self.ownerController, animated: true, completion: completion)
+    }
+    
+    public func updateInteractivePresentationTransition(_toProgress progress: CGFloat) {
+        self.interactivePresentationController.update(progress)
+    }
+    
+    public func cancelInteractivePresentationTransaction() {
+        self.interactivePresentationController.completionSpeed = 0.999
+        self.interactivePresentationController.cancel()
+        
+        self.interactivePresentationController = nil
+    }
+    
+    public func finishInteractivePresentationTrasition() {
+        self.interactivePresentationController.finish()
+        self.interactivePresentationController = nil
     }
 }
 
@@ -140,7 +165,7 @@ extension Transition {
         self.interactionDismissalController = nil
     }
     
-    public func finishInteractionDismissalTransaction() {
+    public func finishInteractiveDismissalTransaction() {
         self.interactionDismissalController.finish()
         self.interactionDismissalController = nil
     }

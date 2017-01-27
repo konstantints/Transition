@@ -26,11 +26,11 @@ class NavigationTransition: Transition {
         
         UIView.animateKeyframes(withDuration: self.transitionDuration, delay: 0.0, options: UIViewKeyframeAnimationOptions.allowUserInteraction, animations: {
             
-            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: self.transitionDuration / 2, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5, animations: {
                 self.fromViewController.view.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             })
             
-            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: self.transitionDuration, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1.0, animations: {
                 var newFrame = self.toViewController.view.frame
                 newFrame.origin.x = 0.0
                 self.toViewController.view.frame = newFrame
@@ -49,13 +49,13 @@ class NavigationTransition: Transition {
         
         UIView.animateKeyframes(withDuration: self.transitionDuration, delay: 0.0, options: .allowUserInteraction, animations: {
             
-            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: self.transitionDuration * 2, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1.0, animations: {
                 var newFrame = self.fromViewController.view.frame
                 newFrame.origin.x = self.containerView.frame.size.width
                 self.fromViewController.view.frame = newFrame
             })
             
-            UIView.addKeyframe(withRelativeStartTime: self.transitionDuration / 2, relativeDuration: self.transitionDuration, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 1.0, animations: {
                 self.toViewController.view.transform = CGAffineTransform.identity
             })
             
@@ -83,7 +83,7 @@ class NavigationTransition: Transition {
             self.updateInteractiveDismissalTransaction(_toProgress: self.gesterPercent)
         default:
             if self.gesterPercent >= 0.5 {
-                self.finishInteractionDismissalTransaction()
+                self.finishInteractiveDismissalTransaction()
             } else {
                 self.cancelInteractiveDismissalTransaction()
             }

@@ -1,4 +1,5 @@
 disabled_rules: # rule identifiers to exclude from running
     - trailing_whitespace
+    - force_cast
     
 line_length: 300

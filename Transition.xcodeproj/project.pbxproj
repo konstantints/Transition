@@ -18,6 +18,8 @@
 		F93495CF1E378D8900D85622 /* NavigationTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93495CE1E378D8900D85622 /* NavigationTransitionViewController.swift */; };
 		F93495D21E3791D300D85622 /* Transition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F934959F1E37433D00D85622 /* Transition.framework */; };
 		F93495D31E3791D300D85622 /* Transition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F934959F1E37433D00D85622 /* Transition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9804F5D1E3A375C0093D614 /* UnderTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9804F5C1E3A375C0093D614 /* UnderTransition.swift */; };
+		F9804F5F1E3A3A920093D614 /* UnderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9804F5E1E3A3A920093D614 /* UnderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		F93495BF1E3745FE00D85622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93495C81E37475600D85622 /* NavigationTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTransition.swift; sourceTree = "<group>"; };
 		F93495CE1E378D8900D85622 /* NavigationTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTransitionViewController.swift; sourceTree = "<group>"; };
+		F9804F5C1E3A375C0093D614 /* UnderTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderTransition.swift; sourceTree = "<group>"; };
+		F9804F5E1E3A3A920093D614 /* UnderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 				F93495B71E3745FE00D85622 /* Main.storyboard */,
 				F93495B51E3745FE00D85622 /* ViewController.swift */,
 				F93495CE1E378D8900D85622 /* NavigationTransitionViewController.swift */,
+				F9804F5E1E3A3A920093D614 /* UnderViewController.swift */,
 			);
 			name = "iOS Examples";
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F93495C81E37475600D85622 /* NavigationTransition.swift */,
+				F9804F5C1E3A375C0093D614 /* UnderTransition.swift */,
 			);
 			name = "Transition Subclasses";
 			sourceTree = "<group>";
@@ -297,7 +303,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "";
 		};
 		F93495CB1E37492400D85622 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -328,8 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93495B61E3745FE00D85622 /* ViewController.swift in Sources */,
+				F9804F5F1E3A3A920093D614 /* UnderViewController.swift in Sources */,
 				F93495CF1E378D8900D85622 /* NavigationTransitionViewController.swift in Sources */,
 				F93495B41E3745FE00D85622 /* AppDelegate.swift in Sources */,
+				F9804F5D1E3A375C0093D614 /* UnderTransition.swift in Sources */,
 				F93495C91E37475600D85622 /* NavigationTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +559,7 @@
 				F93495A91E37433D00D85622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F93495C01E3745FE00D85622 /* Build configuration list for PBXNativeTarget "iOS Example" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +568,7 @@
 				F93495C21E3745FE00D85622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
